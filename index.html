@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Samuel Amadasun | Machine Learning Engineer and Data Analyst</title>
+<meta name="description" content="Samuel Amadasun is a machine learning engineer and data analyst who builds, deploys and explains data-driven models with Python.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234C8DFF'/%3E%3Ctext x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A101E;--card:rgba(255,255,255,.035);--line:rgba(255,255,255,.1);--accent:#4C8DFF;--accent2:#8DB6FF;--text:#E7ECF6;--muted:#9AA7BF;
+--head:'Manrope','Segoe UI',Arial,sans-serif;--body:'Inter','Segoe UI',Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font:16px/1.7 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+ background:radial-gradient(1000px 540px at 88% -8%,rgba(76,141,255,.17),transparent 65%),radial-gradient(800px 520px at -5% 105%,rgba(76,141,255,.09),transparent 65%)}
+.bg::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:30px 30px;-webkit-mask-image:linear-gradient(#000,transparent 80%);mask-image:linear-gradient(#000,transparent 80%)}
+.bg svg{position:absolute;right:0;bottom:0;width:min(1100px,100%);height:44%;opacity:.55}
+.bg .ln{stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 3.2s .2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font:inherit;color:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.2}
+header{position:fixed;z-index:10;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);background:rgba(10,16,30,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{max-width:1120px;margin:0 auto;height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text);font:700 15px var(--head)}
+.brand:hover{text-decoration:none}
+.mono{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--accent);color:#fff;font:800 13px var(--head);letter-spacing:.02em}
+#links{display:flex;gap:2px}
+#links a{position:relative;padding:8px 13px;color:var(--muted);font:500 14px var(--body);transition:color .2s}
+#links a:hover{color:var(--text);text-decoration:none}
+#links a.on{color:#fff}
+#links a.on::after{content:"";position:absolute;left:13px;right:13px;bottom:-12px;height:2px;border-radius:2px;background:var(--accent)}
+#menu{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--card)}
+#menu svg{width:20px;height:20px;stroke:var(--text);stroke-width:1.8;stroke-linecap:round;fill:none}
+main{position:relative;z-index:2;height:100%;overflow-y:auto;padding:104px 24px 56px}
+.page{display:none;max-width:1120px;margin:0 auto;min-height:calc(100% - 60px)}
+.page.on{display:block;animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.home.on{display:grid;grid-template-columns:1.2fr .9fr;gap:64px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-size:13.5px;color:var(--muted)}
+.status i{width:7px;height:7px;border-radius:50%;background:#3FD08C}
+h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin:22px 0 10px}
+.sub{font:600 clamp(18px,2.2vw,23px) var(--head);color:var(--accent2);margin:0 0 18px}
+.lede{color:#B9C4DA;max-width:33em;margin:0 0 28px;font-size:17.5px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font:600 14.5px var(--body);border:1px solid var(--line);color:var(--text);background:var(--card);transition:background .2s,border-color .2s}
+.btn:hover{background:rgba(255,255,255,.08);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#3F7EEE}
+.facts-row{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:38px;padding-top:24px;border-top:1px solid var(--line)}
+.facts-row div{font-size:14px;color:var(--muted)}
+.facts-row b{display:block;font:700 15.5px var(--head);color:var(--text)}
+.photo{max-width:400px;margin:0 auto;width:100%;padding:8px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.photo img{display:block;width:100%;height:auto;border-radius:15px;aspect-ratio:4/4.5;object-fit:cover;object-position:50% 12%;background:#101a33}
+.sec-t{font-size:clamp(26px,3.2vw,36px);font-weight:800;letter-spacing:-.015em;margin-bottom:6px}
+.sec-s{color:var(--muted);margin:0 0 30px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;transition:border-color .2s}
+.panel:hover{border-color:rgba(141,182,255,.35)}
+.panel h3{font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent2);margin-bottom:14px}
+.about{display:grid;grid-template-columns:1.7fr 1fr;gap:22px;align-items:start}
+.stack{display:grid;gap:18px}
+.about p{margin:0 0 12px;color:#C3CDE0}
+.about p:last-child{margin:0}
+.side{position:sticky;top:0}
+.facts{display:grid;gap:18px}
+.facts div{padding-left:14px;border-left:2px solid var(--accent)}
+.facts b{display:block;font:700 15px var(--head)}
+.facts span{color:var(--muted);font-size:14.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{padding:4px 11px;border-radius:7px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:14px;color:#D3DBEB}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{padding:7px 16px;border-radius:99px;border:1px solid var(--line);background:transparent;font:500 14px var(--body);color:var(--muted);transition:.2s}
+.filters button:hover{color:var(--text)}
+.filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.proj{display:flex;flex-direction:column;gap:12px}
+.proj[hidden]{display:none}
+.proj.lead{grid-column:1/-1}
+.proj h3{font:700 18px var(--head);letter-spacing:0;text-transform:none;color:var(--text);margin:0}
+.proj p{margin:0;color:#C3CDE0;font-size:15.5px}
+.proj .chips{margin-top:auto}
+.proj a.repo{font-weight:600;font-size:14.5px}
+.cover{height:150px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,rgba(76,141,255,.14),rgba(76,141,255,.03));display:grid;place-items:center}
+.proj.lead .cover{height:200px}
+.cover svg,.cover img{width:100%;height:100%}
+.cover img{object-fit:contain;padding:14px}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:1px solid var(--line)}
+.tl li{position:relative;padding:0 0 22px 20px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-24px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.tl b{font:700 16.5px var(--head)}
+.tl .when{color:var(--muted);font-size:14px}
+.tl .org{color:var(--accent2);font-size:15px}
+.tl ul{margin:8px 0 0;padding-left:18px;color:#C3CDE0;font-size:15.5px}
+.tl p{margin:4px 0 0;color:#C3CDE0;font-size:15.5px}
+.exp{display:grid;gap:18px}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.paper{max-width:830px;margin:0 auto;background:#fff;color:#000;border-radius:6px;padding:46px 54px;box-shadow:0 30px 70px rgba(0,0,0,.5);font:15px/1.4 'Times New Roman',Times,serif}
+.paper h4{margin:0;text-align:center;font-size:19px}
+.paper .c{text-align:center}
+.paper a{color:#000;text-decoration:underline}
+.paper h5{margin:16px 0 6px;font-size:15px;letter-spacing:.02em;text-transform:uppercase;border-bottom:1.5px solid #000;padding-bottom:2px}
+.paper p{margin:0 0 4px}
+.paper ul{margin:0 0 4px;padding-left:22px}
+.paper li{margin-bottom:1px}
+.paper .r{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.paper .p{margin-top:8px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.contact b{display:block;color:var(--muted);font:500 13.5px var(--body);margin-bottom:4px}
+.contact a{font-weight:500;word-break:break-word}
+.copy{margin-left:10px;padding:2px 10px;border-radius:7px;border:1px solid var(--line);background:transparent;font-size:12.5px;color:var(--muted)}
+.copy:hover{color:var(--text)}
+#toast{position:fixed;z-index:20;left:50%;bottom:28px;transform:translate(-50%,14px);opacity:0;padding:10px 18px;border-radius:10px;background:#16213D;border:1px solid var(--line);font-size:14px;transition:.25s;pointer-events:none}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:900px){
+  #menu{display:grid;place-items:center}
+  #links{position:absolute;top:calc(64px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;padding:10px 16px 16px;background:rgba(10,16,30,.97);border-bottom:1px solid var(--line);display:none}
+  #links.open{display:flex}
+  #links a{padding:12px}
+  #links a.on::after{display:none}
+  #links a.on{background:rgba(76,141,255,.14);border-radius:8px}
+  .home.on,.about{grid-template-columns:1fr;gap:36px}
+  .photo{max-width:320px;order:-1}
+  .side{position:static}
+  main{padding:92px 18px 48px}
+  .paper{padding:26px 20px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.bg .ln{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <svg viewBox="0 0 1100 300" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#4C8DFF" stop-opacity=".22"/><stop offset="1" stop-color="#4C8DFF" stop-opacity="0"/></linearGradient></defs>
+  <path d="M0 250 C120 230 190 262 310 215 S480 170 580 190 S760 110 860 130 S1010 60 1100 48 L1100 300 L0 300Z" fill="url(#g)"/>
+  <path class="ln" d="M0 250 C120 230 190 262 310 215 S480 170 580 190 S760 110 860 130 S1010 60 1100 48" fill="none" stroke="#4C8DFF" stroke-width="1.6" stroke-opacity=".7"/></svg>
+</div>
+
+<header><div class="bar">
+  <a class="brand" href="#home" data-go="home"><span class="mono">SA</span><span>Samuel Amadasun</span></a>
+  <nav id="links" aria-label="Main"></nav>
+  <button id="menu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main>
+<section class="page home" id="p-home">
+  <div>
+    <span class="status"><i></i>Open to ML roles and data analytics</span>
+    <h1>Samuel Amadasun</h1>
+    <p class="sub">Machine Learning Engineer and Data Analyst</p>
+    <p class="lede">I clean and explore data, train models, and ship them as working applications with Python. I am looking for machine learning roles and am open to data analytics and related positions.</p>
+    <div class="btns"><a class="btn primary" href="#projects" data-go="projects">View projects</a><a class="btn" href="#resume" data-go="resume">View resume</a><a class="btn" href="#contact" data-go="contact">Contact</a></div>
+    <div class="facts-row">
+      <div><b>BSc Computer Science</b>University of Benin</div>
+      <div><b>50+ learners</b>Taught and mentored</div>
+      <div><b>Python, FastAPI, SQL</b>Core stack</div>
+    </div>
+  </div>
+  <div class="photo"><img src="samuel.jpg" alt="Portrait of Samuel Amadasun in a navy suit" width="800" height="846"></div>
+</section>
+
+<section class="page" id="p-about">
+  <h2 class="sec-t">About me</h2><p class="sec-s">Machine learning engineering built on a data analytics foundation.</p>
+  <div class="about">
+    <div class="stack">
+      <div class="panel"><h3>Profile</h3>
+        <p>I am a machine learning engineer and data analyst with a BSc in Computer Science from the University of Benin (2021/2025 session, completed November 2025). I started in data analysis, and my interest in what models can do with data pulled me into data science, machine learning and deep learning. I built my practical ML foundation at Babtech Computers and have been building projects since.</p></div>
+      <div class="panel"><h3>Machine learning engineering</h3>
+        <p>I work across the full model lifecycle: cleaning and preprocessing data, exploratory analysis, feature engineering, training and evaluating models with Python, Pandas, NumPy and Scikit-learn, and deploying them as usable applications with FastAPI and Streamlit.</p>
+        <p>My face recognition system shows this end to end. The model runs as a pipeline behind a FastAPI service, so a user uploads two faces and gets back whether they match, with a similarity score. I have also built classification and regression models (phishing detection, loan prediction, house price prediction) and an anomaly detector for credit card data.</p></div>
+      <div class="panel"><h3>Deep learning</h3>
+        <p>I have built deep neural networks from scratch to understand how they learn, rather than only calling library functions. I have completed the final project of Andrew Ng’s deep learning course for certification as I continue to keep building and optimizing ML systems.</p></div>
+      <div class="panel"><h3>Data analysis</h3>
+        <p>I began as a data analyst and still work as one: cleaning messy data, exploring it, and turning it into visuals and reports with SQL, Excel, Google Sheets, Power BI, Matplotlib and Seaborn. My analyses include a fellowship academic dataset and a company share investment study.</p></div>
+      <div class="panel"><h3>Teaching and mentoring</h3>
+        <p>From September 2024 to February 2025, during my industrial training at Babtech Computers, I taught and mentored over 50 learners aged 10 to 50. I taught Microsoft Office, CorelDRAW, advanced Excel for data analytics, Python, Power BI and SQL. It keeps me practiced at explaining technical work in plain language.</p></div>
+    </div>
+    <div class="stack side">
+      <div class="panel facts"><h3>At a glance</h3>
+        <div><b>Roles</b><span>Machine learning engineer, deep learning engineer, AI engineer, data analyst</span></div>
+        <div><b>Education</b><span>BSc Computer Science, University of Benin</span></div>
+        <div><b>Training</b><span>Babtech Computers (machine learning), Andrew Ng deep learning course (deep learning)</span></div>
+        <div><b>Looking for</b><span>Machine learning roles first, and open to data analytics and related data roles</span></div>
+      </div>
+      <a class="btn primary" href="#resume" data-go="resume" style="text-align:center">View resume</a>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="p-skills">
+  <h2 class="sec-t">Skills</h2><p class="sec-s">Tools and methods I use to take data from raw to deployed.</p>
+  <div class="grid">
+    <div class="panel"><h3>Programming and libraries</h3><ul class="chips"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Matplotlib</li><li>Seaborn</li><li>FastAPI</li><li>REST APIs</li><li>Streamlit</li></ul></div>
+    <div class="panel"><h3>Machine learning and AI</h3><ul class="chips"><li>Machine learning</li><li>Deep learning</li><li>Neural networks from scratch</li><li>Classification</li><li>Regression</li><li>Anomaly detection</li><li>Computer vision (face recognition)</li><li>Model evaluation</li></ul></div>
+    <div class="panel"><h3>Data science and analysis</h3><ul class="chips"><li>Data cleaning</li><li>Data preprocessing</li><li>Feature engineering</li><li>EDA</li><li>Predictive modeling</li><li>Data visualization</li><li>Dashboards</li></ul></div>
+    <div class="panel"><h3>Databases and BI</h3><ul class="chips"><li>SQL</li><li>Joins</li><li>Aggregations</li><li>Query optimization</li><li>Power BI</li><li>Excel</li><li>Google Sheets</li></ul></div>
+    <div class="panel"><h3>Deployment and workflow</h3><ul class="chips"><li>Model deployment</li><li>FastAPI</li><li>Streamlit</li><li>Git</li><li>GitHub</li><li>Jupyter Notebook</li><li>VS Code</li></ul></div>
+    <div class="panel"><h3>Office and collaboration</h3><ul class="chips"><li>MS Word</li><li>MS PowerPoint</li><li>MS Excel</li><li>CorelDRAW</li><li>Google Sheets</li><li>Google Meet</li></ul></div>
+    <div class="panel"><h3>Working style</h3><ul class="chips"><li>Teaching</li><li>Mentoring</li><li>Communication</li><li>Presentation</li><li>Problem solving</li><li>Critical thinking</li><li>Teamwork</li><li>Time management</li></ul></div>
+  </div>
+</section>
+
+<section class="page" id="p-projects">
+  <h2 class="sec-t">Projects</h2><p class="sec-s">Selected work in machine learning, deployment and data analysis.</p>
+  <div class="filters" role="group" aria-label="Filter projects">
+    <button class="on" data-f="all">All</button><button data-f="ml">ML and AI</button><button data-f="data">Data analysis</button>
+  </div>
+  <div class="projects">
+    <article class="panel proj lead" data-t="ml" data-img="face-recognition">
+      <div class="cover" data-art="face"></div>
+      <h3>Face recognition system</h3>
+      <p>Upload two faces and the system tells you whether they match, with a similarity score either way. The model runs as a pipeline inside a FastAPI service, so it works as a real application rather than a notebook.</p>
+      <ul class="chips"><li>Python</li><li>FastAPI</li><li>AI engineering</li><li>Model pipeline</li></ul>
+      <a class="repo" href="https://github.com/hivecampus/New-Face-Recognition-System-UNIBEN/tree/main" target="_blank" rel="noopener">View repository</a>
+    </article>
+    <article class="panel proj" data-t="ml" data-img="plotsense"><div class="cover" data-art="hack"></div><h3>PlotSense AI hackathon</h3><p>My entry in the PlotSense AI Hackathon 2025.</p><a class="repo" href="https://github.com/Sammydcode/plotsenseai-hackathon-PSH2025-696" target="_blank" rel="noopener">View repository</a></article>
+    <article class="panel proj" data-t="data" data-img="fellowship"><div class="cover" data-art="bars"></div><h3>Fellowship academic data analysis</h3><p>Analysis of a fellowship’s academic dataset, with the full work in the repository.</p><a class="repo" href="https://github.com/Sammydcode/RCF-ACADEMIC-ANALYSIS" target="_blank" rel="noopener">View repository</a></article>
+    <article class="panel proj" data-t="data" data-img="shares"><div class="cover" data-art="line"></div><h3>Company share investment analysis</h3><p>Data analysis of company shares to understand investment performance.</p><a class="repo" href="https://github.com/Sammydcode/Company-Share-Investment-Analysis" target="_blank" rel="noopener">View repository</a></article>
+    <article class="panel proj" data-t="ml" data-img="loan"><div class="cover" data-art="gauge"></div><h3>Loan prediction model</h3><p>A machine learning model that predicts loan outcomes. The repository is private, so I am happy to walk you through it on request.</p><ul class="chips"><li>Python</li><li>Scikit-learn</li></ul></article>
+    <article class="panel proj" data-t="ml" data-img="neural-network"><div class="cover" data-art="nn"></div><h3>Deep neural network from scratch</h3><p>A deep neural network built from first principles while completing Andrew Ng’s deep learning course.</p><ul class="chips"><li>Python</li><li>NumPy</li><li>Deep learning</li></ul></article>
+    <article class="panel proj" data-t="ml" data-img="earlier-work"><div class="cover" data-art="ml"></div><h3>Earlier machine learning work</h3><p>Final-year builds include a phishing detection system, a house price prediction system (trained end to end in a notebook) and a credit card anomaly detector.</p></article>
+  </div>
+  <p style="margin-top:24px;color:var(--muted)">More on <a href="https://github.com/Sammydcode" target="_blank" rel="noopener">my GitHub profile</a>.</p>
+</section>
+
+<section class="page" id="p-experience">
+  <h2 class="sec-t">Experience and education</h2><p class="sec-s">Where I have worked, studied and trained.</p>
+  <div class="exp">
+    <div class="panel"><h3>Experience</h3><ul class="tl"><li>
+      <div class="row"><b>Instructor and Mentor (Industrial Training)</b><span class="when">Sep 2024 to Feb 2025</span></div>
+      <div class="org">Babtech Computers</div>
+      <ul><li>Taught and mentored over 50 learners aged 10 to 50 during a 300-level industrial training placement.</li><li>Taught data analytics: advanced Excel, Python for data analytics, Power BI and SQL.</li><li>Taught Python to software development students, and Microsoft Office (Word, Excel, PowerPoint) and CorelDRAW for desktop publishing.</li></ul>
+    </li></ul></div>
+    <div class="panel"><h3>Education</h3><ul class="tl"><li>
+      <div class="row"><b>BSc Computer Science</b><span class="when">2021 to 2025</span></div>
+      <div class="org">University of Benin, Benin City, Nigeria</div>
+      <p>Completed November 2025.</p>
+    </li></ul></div>
+    <div class="panel"><h3>Training and certification</h3><ul class="tl">
+      <li><div class="row"><b>Deep learning course, Andrew Ng</b></div><p>Certified.</p></li>
+      <li><div class="row"><b>Machine learning training</b></div><div class="org">Babtech Computers</div><p>Practical foundation in machine learning.</p></li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="page" id="p-resume">
+  <h2 class="sec-t">Resume</h2><p class="sec-s">Download a copy or read it below.</p>
+  <div class="tools"><a class="btn primary" href="Samuel_Amadasun_Resume.pdf" download>Download PDF</a><a class="btn" href="Samuel_Amadasun_Resume.docx" download>Download Word</a></div>
+  <article class="paper">
+    <h4>SAMUEL AMADASUN</h4>
+    <p class="c">Junior Machine Learning Engineer | Data Analyst</p>
+    <p class="c">sammyonamen@gmail.com | +234 808 175 7291</p>
+    <p class="c"><a href="https://www.linkedin.com/in/datahubsammyreels" target="_blank" rel="noopener">linkedin.com/in/datahubsammyreels</a> | <a href="https://github.com/Sammydcode" target="_blank" rel="noopener">github.com/Sammydcode</a></p>
+    <h5>Professional Summary</h5>
+    <p>Junior Machine Learning Engineer with a solid background in data analysis and data science. BSc in Computer Science. Builds the full pipeline in Python: data cleaning, feature engineering, exploratory analysis, model training and evaluation, and deployment as APIs and apps with FastAPI and Streamlit. Delivered a face recognition system, classification and regression models, an anomaly detector and deep neural networks from scratch. Taught and mentored over 50 learners in Python, SQL, Power BI and Excel.</p>
+    <h5>Technical Skills</h5>
+    <p><b>Programming:</b> Python, SQL</p>
+    <p><b>Libraries:</b> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</p>
+    <p><b>Machine Learning:</b> Classification, regression, anomaly detection, deep learning, neural networks, computer vision (face recognition), predictive modeling, model evaluation, feature engineering</p>
+    <p><b>Data Analysis:</b> Data cleaning, data preprocessing, exploratory data analysis, data visualization, dashboards, SQL joins, aggregations, query optimization</p>
+    <p><b>Deployment:</b> FastAPI, REST APIs, Streamlit, model deployment</p>
+    <p><b>Tools:</b> Git, GitHub, Jupyter Notebook, VS Code, Power BI, Excel, Google Sheets, Microsoft Word, Microsoft PowerPoint, CorelDRAW, Google Meet</p>
+    <p><b>Professional:</b> Teaching, mentoring, communication, presentation, problem solving, critical thinking, teamwork, time management</p>
+    <h5>Projects</h5>
+    <p class="p"><b>Face Recognition System</b> | Python, FastAPI</p>
+    <ul><li>Built a face verification system that compares two uploaded face images and returns a match decision with a similarity score.</li><li>Packaged the model as a pipeline served through a FastAPI application, making it usable as a REST API.</li></ul>
+    <p class="p"><b>PlotSense AI Hackathon 2025</b> | Python</p>
+    <ul><li>Participated in the PlotSense AI Hackathon 2025 and published the solution on GitHub.</li></ul>
+    <p class="p"><b>Loan Prediction Model</b> | Python, Machine Learning</p>
+    <ul><li>Built a machine learning model that predicts loan outcomes from applicant data.</li></ul>
+    <p class="p"><b>Deep Neural Networks from Scratch</b> | Python, Deep Learning</p>
+    <ul><li>Implemented deep neural networks from first principles while completing Andrew Ng’s deep learning course.</li></ul>
+    <p class="p"><b>Final-Year Machine Learning Projects</b> | Python, Machine Learning</p>
+    <ul><li>Built a phishing detection system, a house price prediction system trained end to end in a Jupyter notebook, and a credit card anomaly detection model.</li></ul>
+    <p class="p"><b>Fellowship Academic Data Analysis</b> | Python, Data Analysis</p>
+    <ul><li>Cleaned, explored and analyzed a fellowship academic dataset and documented the findings in a GitHub repository.</li></ul>
+    <p class="p"><b>Company Share Investment Analysis</b> | Python, Data Analysis</p>
+    <ul><li>Analyzed company share data to assess investment performance and published the work on GitHub.</li></ul>
+    <h5>Experience</h5>
+    <div class="r"><b>Instructor and Mentor (Industrial Training)</b><span>Sep 2024 - Feb 2025</span></div>
+    <p>Babtech Computers</p>
+    <ul><li>Taught and mentored over 50 learners aged 10 to 50 during a 300-level industrial training placement.</li><li>Taught data analytics: advanced Excel, Python for data analytics, Power BI and SQL.</li><li>Taught Python to software development students, and Microsoft Office (Word, Excel, PowerPoint) and CorelDRAW for desktop publishing.</li><li>Adapted lessons to mixed ages and skill levels, explaining technical concepts in plain language.</li></ul>
+    <h5>Education</h5>
+    <div class="r"><b>BSc Computer Science</b><span>2021 - 2025</span></div>
+    <p>University of Benin, Benin City, Nigeria (completed November 2025)</p>
+    <h5>Training and Certifications</h5>
+    <div class="r"><b>Deep Learning Course, Andrew Ng</b></div>
+    <p>Certified</p>
+    <p class="p"><b>Machine Learning Training, Babtech Computers</b></p>
+    <p>Practical foundation in machine learning</p>
+  </article>
+</section>
+
+<section class="page" id="p-contact">
+  <h2 class="sec-t">Contact</h2><p class="sec-s">I’m looking for machine learning roles and am open to data analytics and related positions. Send me a message.</p>
+  <div class="panel"><div class="contact">
+    <div><b>Email</b><a href="mailto:sammyonamen@gmail.com">sammyonamen@gmail.com</a><button class="copy" data-copy="sammyonamen@gmail.com">Copy</button></div>
+    <div><b>Phone</b><a href="tel:+2348081757291">+234 808 175 7291</a><button class="copy" data-copy="+2348081757291">Copy</button></div>
+    <div><b>LinkedIn</b><a href="https://www.linkedin.com/in/datahubsammyreels" target="_blank" rel="noopener">linkedin.com/in/datahubsammyreels</a></div>
+    <div><b>GitHub</b><a href="https://github.com/Sammydcode" target="_blank" rel="noopener">github.com/Sammydcode</a></div>
+  </div></div>
+</section>
+</main>
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+/* navigation */
+var labels={home:'Home',about:'About',skills:'Skills',projects:'Projects',experience:'Experience',resume:'Resume',contact:'Contact'};
+var pages=Object.keys(labels),links=$('#links'),main=$('main'),menu=$('#menu');
+links.innerHTML=pages.map(function(p){return '<a href="#'+p+'" data-go="'+p+'">'+labels[p]+'</a>'}).join('');
+function show(p){if(pages.indexOf(p)<0)p='home';pages.forEach(function(q){$('#p-'+q).classList.toggle('on',q===p)});$$('#links a').forEach(function(a){a.classList.toggle('on',a.dataset.go===p)});main.scrollTop=0;links.classList.remove('open');menu.setAttribute('aria-expanded','false')}
+document.addEventListener('click',function(e){var a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();show(a.dataset.go);try{history.replaceState(null,'','#'+a.dataset.go)}catch(x){}});
+menu.addEventListener('click',function(){var o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+addEventListener('hashchange',function(){show(location.hash.slice(1))});
+show(location.hash.slice(1));
+/* project filters */
+$$('.filters button').forEach(function(b){b.addEventListener('click',function(){$$('.filters button').forEach(function(x){x.classList.toggle('on',x===b)});$$('.proj').forEach(function(c){c.hidden=b.dataset.f!=='all'&&c.dataset.t!==b.dataset.f})})});
+/* copy buttons */
+var toast=$('#toast'),tt;
+$$('.copy').forEach(function(b){b.addEventListener('click',function(){var v=b.dataset.copy;try{navigator.clipboard.writeText(v)}catch(x){}toast.textContent='Copied '+v;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},1800)})});
+/* project cover art, replaced by images/<name>.png|jpg|webp when present */
+var G='fill="none" stroke="#8DB6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"',B='stroke="#4C8DFF"',F='fill="#8DB6FF"',R='fill="rgba(76,141,255,.28)"';
+function nn(){var xs=[70,160,250],ys=[[35,75,115],[25,60,90,125],[55,95]],o='',i,j,k;for(i=0;i<2;i++)for(j=0;j<ys[i].length;j++)for(k=0;k<ys[i+1].length;k++)o+='<path d="M'+xs[i]+' '+ys[i][j]+'L'+xs[i+1]+' '+ys[i+1][k]+'" stroke="#4C8DFF" stroke-width="1" opacity=".55"/>';for(i=0;i<3;i++)for(j=0;j<ys[i].length;j++)o+='<circle cx="'+xs[i]+'" cy="'+ys[i][j]+'" r="7" '+F+'/>';return o}
+var art={
+face:'<circle cx="100" cy="75" r="30"/><circle cx="90" cy="69" r="3" '+F+'/><circle cx="110" cy="69" r="3" '+F+'/><path d="M88 87q12 9 24 0"/><path d="M62 38v-10h10M138 38v-10h-10M62 112v10h10M138 112v10h-10"/><circle cx="220" cy="75" r="30"/><circle cx="210" cy="69" r="3" '+F+'/><circle cx="230" cy="69" r="3" '+F+'/><path d="M208 87q12 9 24 0"/><path d="M150 75h20M163 68l8 7-8 7" '+B+'/>',
+hack:'<path d="M60 122h200M60 122V28"/><rect x="85" y="86" width="28" height="36" '+R+'/><rect x="130" y="62" width="28" height="60" '+R+'/><rect x="175" y="76" width="28" height="46" '+R+'/><path d="M75 80l45-28 45 14 55-38" '+B+'/><path d="M232 22l4 9 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" '+F+'/>',
+bars:'<path d="M60 122h200"/><rect x="72" y="70" width="22" height="52" '+R+'/><rect x="106" y="42" width="22" height="80" '+R+'/><rect x="140" y="88" width="22" height="34" '+R+'/><rect x="174" y="56" width="22" height="66" '+R+'/><rect x="208" y="30" width="22" height="92" '+R+'/>',
+line:'<path d="M60 122h200M60 122V25"/><path d="M68 108l32-18 28 12 34-38 30 14 50-42" '+B+'/><circle cx="100" cy="90" r="4" '+F+'/><circle cx="162" cy="64" r="4" '+F+'/><circle cx="252" cy="36" r="4" '+F+'/>',
+gauge:'<path d="M80 118A80 80 0 0 1 240 118" stroke-width="10" opacity=".3"/><path d="M80 118A80 80 0 0 1 200 50" '+B+' stroke-width="10"/><path d="M160 118l38-46"/><circle cx="160" cy="118" r="8" '+F+'/>',
+nn:'__NN__',
+ml:'<path d="M50 112l30-26 30 26v22H50z"/><path d="M158 40l30 10v24c0 18-14 28-30 34-16-6-30-16-30-34V50z" '+B+'/><path d="M150 76l8 8 14-16"/><rect x="226" y="62" width="56" height="38" rx="6"/><path d="M226 76h56M234 90h16"/>'};
+$$('.cover').forEach(function(c){var a=art[c.dataset.art];if(a==='__NN__')a=nn();c.innerHTML='<svg viewBox="0 0 320 150" '+G+' aria-hidden="true">'+a+'</svg>';
+  var card=c.closest('.proj'),n=card.dataset.img,ex=['png','jpg','webp'],t=card.querySelector('h3').textContent;
+  (function tryNext(i){if(i>=ex.length)return;var im=new Image();im.onload=function(){c.innerHTML='';im.alt=t;c.appendChild(im)};im.onerror=function(){tryNext(i+1)};im.src='images/'+n+'.'+ex[i]})(0)});
+})();
+</script>
+</body>
+</html>
