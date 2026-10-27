@@ -86,7 +86,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
 .proj.lead{grid-column:1/-1}
 .proj h3{font:700 18px var(--head);letter-spacing:0;text-transform:none;color:var(--text);margin:0}
 .proj p{margin:0;color:#C3CDE0;font-size:15.5px}
-.proj .chips{margin-top:auto}
+.proj>:last-child:not(p){margin-top:auto}
 .proj a.repo{font-weight:600;font-size:14.5px}
 .cover{height:150px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,rgba(76,141,255,.14),rgba(76,141,255,.03));display:grid;place-items:center}
 .proj.lead .cover{height:200px}
@@ -103,7 +103,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
 .tl ul{margin:8px 0 0;padding-left:18px;color:#C3CDE0;font-size:15.5px}
 .tl p{margin:4px 0 0;color:#C3CDE0;font-size:15.5px}
 .exp{display:grid;gap:18px}
-.tools{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.tools{display:flex;flex-wrap:wrap;gap:12px;max-width:830px;margin:0 auto 22px}
 .paper{max-width:830px;margin:0 auto;background:#fff;color:#000;border-radius:6px;padding:46px 54px;box-shadow:0 30px 70px rgba(0,0,0,.5);font:15px/1.4 'Times New Roman',Times,serif}
 .paper h4{margin:0;text-align:center;font-size:19px}
 .paper .c{text-align:center}
@@ -177,7 +177,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
         <p>I work across the full model lifecycle: cleaning and preprocessing data, exploratory analysis, feature engineering, training and evaluating models with Python, Pandas, NumPy and Scikit-learn, and deploying them as usable applications with FastAPI and Streamlit.</p>
         <p>My face recognition system shows this end to end. The model runs as a pipeline behind a FastAPI service, so a user uploads two faces and gets back whether they match, with a similarity score. I have also built classification and regression models (phishing detection, loan prediction, house price prediction) and an anomaly detector for credit card data.</p></div>
       <div class="panel"><h3>Deep learning</h3>
-        <p>I have built deep neural networks from scratch to understand how they learn, rather than only calling library functions. I have completed the final project of Andrew Ng’s deep learning course for certification as I continue to keep building and optimizing ML systems.</p></div>
+        <p>I have built deep neural networks from scratch to understand how they learn, rather than only calling library functions. I completed Andrew Ng’s deep learning course and earned the certification, and I continue to build and optimize ML systems.</p></div>
       <div class="panel"><h3>Data analysis</h3>
         <p>I began as a data analyst and still work as one: cleaning messy data, exploring it, and turning it into visuals and reports with SQL, Excel, Google Sheets, Power BI, Matplotlib and Seaborn. My analyses include a fellowship academic dataset and a company share investment study.</p></div>
       <div class="panel"><h3>Teaching and mentoring</h3>
@@ -187,7 +187,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
       <div class="panel facts"><h3>At a glance</h3>
         <div><b>Roles</b><span>Machine learning engineer, deep learning engineer, AI engineer, data analyst</span></div>
         <div><b>Education</b><span>BSc Computer Science, University of Benin</span></div>
-        <div><b>Training</b><span>Babtech Computers (machine learning), Andrew Ng deep learning course (deep learning)</span></div>
+        <div><b>Training</b><span>Babtech Computers (machine learning), Andrew Ng deep learning course (certified)</span></div>
         <div><b>Looking for</b><span>Machine learning roles first, and open to data analytics and related data roles</span></div>
       </div>
       <a class="btn primary" href="#resume" data-go="resume" style="text-align:center">View resume</a>
@@ -225,7 +225,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
     <article class="panel proj" data-t="data" data-img="fellowship"><div class="cover" data-art="bars"></div><h3>Fellowship academic data analysis</h3><p>Analysis of a fellowship’s academic dataset, with the full work in the repository.</p><a class="repo" href="https://github.com/Sammydcode/RCF-ACADEMIC-ANALYSIS" target="_blank" rel="noopener">View repository</a></article>
     <article class="panel proj" data-t="data" data-img="shares"><div class="cover" data-art="line"></div><h3>Company share investment analysis</h3><p>Data analysis of company shares to understand investment performance.</p><a class="repo" href="https://github.com/Sammydcode/Company-Share-Investment-Analysis" target="_blank" rel="noopener">View repository</a></article>
     <article class="panel proj" data-t="ml" data-img="loan"><div class="cover" data-art="gauge"></div><h3>Loan prediction model</h3><p>A machine learning model that predicts loan outcomes. The repository is private, so I am happy to walk you through it on request.</p><ul class="chips"><li>Python</li><li>Scikit-learn</li></ul></article>
-    <article class="panel proj" data-t="ml" data-img="neural-network"><div class="cover" data-art="nn"></div><h3>Deep neural network from scratch</h3><p>A deep neural network built from first principles while completing Andrew Ng’s deep learning course.</p><ul class="chips"><li>Python</li><li>NumPy</li><li>Deep learning</li></ul></article>
+    <article class="panel proj" data-t="ml" data-img="neural-network"><div class="cover" data-art="nn"></div><h3>Deep neural network from scratch</h3><p>A deep neural network built from first principles as part of Andrew Ng’s deep learning course.</p><ul class="chips"><li>Python</li><li>NumPy</li><li>Deep learning</li></ul></article>
     <article class="panel proj" data-t="ml" data-img="earlier-work"><div class="cover" data-art="ml"></div><h3>Earlier machine learning work</h3><p>Final-year builds include a phishing detection system, a house price prediction system (trained end to end in a notebook) and a credit card anomaly detector.</p></article>
   </div>
   <p style="margin-top:24px;color:var(--muted)">More on <a href="https://github.com/Sammydcode" target="_blank" rel="noopener">my GitHub profile</a>.</p>
@@ -245,7 +245,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
       <p>Completed November 2025.</p>
     </li></ul></div>
     <div class="panel"><h3>Training and certification</h3><ul class="tl">
-      <li><div class="row"><b>Deep learning course, Andrew Ng</b></div><p>Certified.</p></li>
+      <li><div class="row"><b>Deep learning course, Andrew Ng</b><span class="when">Certified</span></div><p>Completed the course, including the final project.</p></li>
       <li><div class="row"><b>Machine learning training</b></div><div class="org">Babtech Computers</div><p>Practical foundation in machine learning.</p></li>
     </ul></div>
   </div>
@@ -277,7 +277,7 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
     <p class="p"><b>Loan Prediction Model</b> | Python, Machine Learning</p>
     <ul><li>Built a machine learning model that predicts loan outcomes from applicant data.</li></ul>
     <p class="p"><b>Deep Neural Networks from Scratch</b> | Python, Deep Learning</p>
-    <ul><li>Implemented deep neural networks from first principles while completing Andrew Ng’s deep learning course.</li></ul>
+    <ul><li>Implemented deep neural networks from first principles as part of Andrew Ng’s deep learning course.</li></ul>
     <p class="p"><b>Final-Year Machine Learning Projects</b> | Python, Machine Learning</p>
     <ul><li>Built a phishing detection system, a house price prediction system trained end to end in a Jupyter notebook, and a credit card anomaly detection model.</li></ul>
     <p class="p"><b>Fellowship Academic Data Analysis</b> | Python, Data Analysis</p>
@@ -292,8 +292,8 @@ h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;letter-spacing:-.02em;margin
     <div class="r"><b>BSc Computer Science</b><span>2021 - 2025</span></div>
     <p>University of Benin, Benin City, Nigeria (completed November 2025)</p>
     <h5>Training and Certifications</h5>
-    <div class="r"><b>Deep Learning Course, Andrew Ng (cousera)</b></div>
-    <p>Certified</p>
+    <div class="r"><b>Deep Learning Course, Andrew Ng</b><span>Certified</span></div>
+    <p>Completed the course, including the final project</p>
     <p class="p"><b>Machine Learning Training, Babtech Computers</b></p>
     <p>Practical foundation in machine learning</p>
   </article>
